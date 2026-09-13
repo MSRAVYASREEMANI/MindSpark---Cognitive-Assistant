@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MindSpark Cognitive Assistant</title>
+    <meta name="description" content="A calming, accessible cognitive assistant and caregiver portal for dementia care featuring North-East Indian languages, EEG tracking, memory games, schedules, and offline sync." />
+    <meta property="og:title" content="MindSpark Cognitive Assistant" />
+    <meta property="og:description" content="A calming, accessible cognitive assistant and caregiver portal for dementia care featuring North-East Indian languages, EEG tracking, memory games, schedules, and offline sync." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- Google Fonts for Accessibility and Material Symbols -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+    <script>
+      // Gracefully prevent benign platform dev HMR/WebSocket rejection alerts from interrupting the UI
+      window.addEventListener('unhandledrejection', function(event) {
+        var reason = event && event.reason;
+        var msg = (reason && (reason.message || reason.stack || String(reason))) || '';
+        if (msg.includes('WebSocket closed without opened') || msg.includes('[vite]') || msg.includes('websocket')) {
+          event.preventDefault();
+        }
+      });
+      window.addEventListener('error', function(event) {
+        var msg = (event && (event.message || String(event))) || '';
+        if (msg.includes('WebSocket closed without opened') || msg.includes('[vite]') || msg.includes('websocket')) {
+          event.preventDefault();
+        }
+      });
+    </script>
+  </head>
+  <body class="bg-[#f8f9fc] text-[#191c1e] antialiased selection:bg-[#abdefe] selection:text-[#003c53]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

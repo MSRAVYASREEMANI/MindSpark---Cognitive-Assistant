@@ -1,0 +1,7 @@
+{
+  "name": "MindSpark Cognitive Assistant",
+  "description": "A calming, accessible cognitive assistant and caregiver portal for dementia care featuring North-East Indian languages, EEG tracking, memory games, schedules, and offline sync.",
+  "requestFramePermissions": ["camera", "microphone", "geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

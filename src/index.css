@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --color-primary: #003c53;
+    --color-primary-container: #0b5471;
+    --color-on-primary: #ffffff;
+    --color-on-primary-container: #8dc7e9;
+    --color-secondary: #306480;
+    --color-secondary-container: #abdefe;
+    --color-on-secondary-container: #2e637e;
+    --color-tertiary: #513000;
+    --color-tertiary-container: #6e4509;
+    --color-on-tertiary-container: #efb571;
+    --color-surface: #f8f9fc;
+    --color-surface-container-low: #f2f4f6;
+    --color-surface-container: #edeef0;
+    --color-surface-container-high: #e7e8eb;
+    --color-surface-container-highest: #e1e2e5;
+    --color-surface-container-lowest: #ffffff;
+    --color-on-surface: #191c1e;
+    --color-on-surface-variant: #40484d;
+    --color-error: #ba1a1a;
+    --color-error-container: #ffdad6;
+    --color-on-error-container: #93000a;
+    --color-outline: #71787e;
+    --color-outline-variant: #c0c7ce;
+  }
+
+  .dark {
+    --color-primary: #94cef0;
+    --color-primary-container: #004c68;
+    --color-on-primary: #001e2c;
+    --color-on-primary-container: #c3e8ff;
+    --color-secondary: #9bcded;
+    --color-secondary-container: #104c67;
+    --color-on-secondary-container: #c4e7ff;
+    --color-tertiary: #f6bb77;
+    --color-tertiary-container: #653e02;
+    --color-on-tertiary-container: #ffddb9;
+    --color-surface: #111416;
+    --color-surface-container-low: #191c1e;
+    --color-surface-container: #1e2023;
+    --color-surface-container-high: #282a2d;
+    --color-surface-container-highest: #333538;
+    --color-surface-container-lowest: #0c0f11;
+    --color-on-surface: #e1e2e5;
+    --color-on-surface-variant: #c0c7ce;
+    --color-error: #ffb4ab;
+    --color-error-container: #93000a;
+    --color-on-error-container: #ffdad6;
+    --color-outline: #8b9298;
+    --color-outline-variant: #40484d;
+  }
+
+  body {
+    font-family: 'Atkinson Hyperlegible Next', system-ui, -apple-system, sans-serif;
+    background-color: var(--color-surface);
+    color: var(--color-on-surface);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined' !important;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  vertical-align: middle;
+}
+
+/* Custom Neumorphic & Glassmorphic Utilities */
+.shadow-neu-extruded {
+  box-shadow: 6px 6px 14px rgba(209, 201, 188, 0.45), -6px -6px 14px rgba(255, 255, 255, 0.9);
+}
+
+.shadow-neu-extruded-lg {
+  box-shadow: 10px 10px 20px rgba(209, 201, 188, 0.5), -10px -10px 20px rgba(255, 255, 255, 0.95);
+}
+
+.shadow-neu-recessed {
+  box-shadow: inset 4px 4px 8px rgba(209, 201, 188, 0.45), inset -4px -4px 8px rgba(255, 255, 255, 0.85);
+}
+
+.shadow-neu-recessed-deep {
+  box-shadow: inset 6px 6px 12px rgba(209, 201, 188, 0.6), inset -6px -6px 12px rgba(255, 255, 255, 0.95);
+}
+
+.dark .shadow-neu-extruded {
+  box-shadow: 6px 6px 14px rgba(0, 0, 0, 0.4), -4px -4px 10px rgba(255, 255, 255, 0.04);
+}
+
+.dark .shadow-neu-extruded-lg {
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5), -6px -6px 14px rgba(255, 255, 255, 0.05);
+}
+
+.dark .shadow-neu-recessed {
+  box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.5), inset -4px -4px 8px rgba(255, 255, 255, 0.03);
+}
+
+.glass-panel {
+  background: rgba(133, 183, 214, 0.14);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.dark .glass-panel {
+  background: rgba(15, 30, 40, 0.4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Naga / Muga silk watermark weave */
+.bg-silk-pattern {
+  background-image: radial-gradient(circle at 20% 30%, rgba(11, 84, 113, 0.035) 2px, transparent 2px), radial-gradient(circle at 80% 70%, rgba(11, 84, 113, 0.035) 2px, transparent 2px);
+  background-size: 48px 48px;
+}
+
